@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>InvoiceSA — Free Invoice Generator</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', -apple-system, system-ui, sans-serif; background: #0a0a0a; color: #f0f0f0; line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(10,10,10,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+  .logo { font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
+  .nav-links { display: flex; gap: 28px; font-size: 14px; color: #999; }
+  .nav-links a:hover { color: #fff; }
+  .btn-primary { background: var(--accent); color: #000; padding: 12px 28px; border-radius: 10px; font-weight: 700; font-size: 15px; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 25px var(--accent-glow); }
+  .btn-outline { background: transparent; color: #fff; padding: 12px 28px; border-radius: 10px; font-weight: 600; font-size: 15px; border: 1px solid rgba(255,255,255,0.15); cursor: pointer; transition: all 0.2s; }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.03); }
+  .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 32px; transition: border-color 0.3s; }
+  .card:hover { border-color: var(--accent); }
+  .section { padding: 100px 0; }
+  .text-center { text-align: center; }
+  .gradient { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .badge { display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; background: var(--accent-bg); color: var(--accent); border: 1px solid var(--accent-border); }
+  footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 40px 0; text-align: center; color: #666; font-size: 13px; }
+  .subscribe-section { padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
+  .subscribe-form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; }
+  .subscribe-form input { flex: 1; padding: 14px 18px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: #fff; font-size: 15px; }
+  .subscribe-msg { font-size: 12px; color: #22c55e; margin-top: 10px; display: none; }
+  @media (max-width: 768px) { .grid-2, .grid-3 { grid-template-columns: 1fr !important; } .hero h1 { font-size: 32px !important; } .nav-links { display: none; } .subscribe-form { flex-direction: column; } }
+:root{--accent:#eab308;--accent2:#f97316;--accent-glow:rgba(234,179,8,0.3);--accent-bg:rgba(234,179,8,0.1);--accent-border:rgba(234,179,8,0.2);}</style></head><body>
+  <nav><div class="container nav-inner"><div class="logo" style="color:#eab308">Invoice<span style="color:#fff">SA</span></div><div class="nav-links"><a href="#features">Features</a><a href="#pricing">Pricing</a><button class="btn-primary" style="padding:8px 18px;font-size:13px">Start Free</button></div></div></nav>
+  <section class="hero section" style="padding-top:160px"><div class="container text-center">
+    <div class="badge">Free for first 5 invoices</div>
+    <h1 style="font-size:52px;font-weight:800;line-height:1.1;margin:20px 0">Professional Invoices<br><span class="gradient">in 60 Seconds</span></h1>
+    <p style="font-size:18px;color:#888;max-width:500px;margin:0 auto 36px">Generate professional, SARS-compliant invoices instantly. ZAR formatting, VAT calculations, PDF export.</p>
+    <button class="btn-primary" style="font-size:16px;padding:14px 32px">Create Your First Invoice — Free</button>
+  </div></section>
+  <section class="section" id="features"><div class="container">
+    <div class="grid grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <div class="card"><h3 style="font-size:16px;font-weight:700;margin-bottom:8px">🇿🇦 SA Compliant</h3><p style="font-size:13px;color:#888">VAT calculations, SARS formatting, and SA business details built in.</p></div>
+      <div class="card"><h3 style="font-size:16px;font-weight:700;margin-bottom:8px">⚡ Instant PDF</h3><p style="font-size:13px;color:#888">Generate and download professional PDF invoices in seconds.</p></div>
+      <div class="card"><h3 style="font-size:16px;font-weight:700;margin-bottom:8px">💰 Free Tier</h3><p style="font-size:13px;color:#888">Create 5 invoices free. Then R49/month for unlimited.</p></div>
+    </div>
+  </div></section>
+  <section class="section" id="pricing" style="background:rgba(255,255,255,0.02)"><div class="container text-center">
+    <h2 style="font-size:36px;font-weight:800;margin-bottom:48px">Pricing</h2>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:600px;margin:0 auto">
+      <div class="card"><div style="font-size:14px;color:#888;margin-bottom:8px">Free</div><div style="font-size:40px;font-weight:800;margin-bottom:16px">R0</div><ul style="list-style:none;text-align:left"><li style="padding:8px 0;font-size:13px">✓ 5 invoices/month</li><li style="padding:8px 0;font-size:13px">✓ Basic templates</li><li style="padding:8px 0;font-size:13px">✓ PDF export</li></ul><button class="btn-outline" style="width:100%;margin-top:20px">Get Started</button></div>
+      <div class="card" style="border-color:#eab308"><div style="font-size:14px;color:#eab308;margin-bottom:8px">Pro</div><div style="font-size:40px;font-weight:800;margin-bottom:16px">R49<span style="font-size:16px;color:#888">/mo</span></div><ul style="list-style:none;text-align:left"><li style="padding:8px 0;font-size:13px">✓ Unlimited invoices</li><li style="padding:8px 0;font-size:13px">✓ All templates</li><li style="padding:8px 0;font-size:13px">✓ VAT reports</li></ul><button class="btn-primary" style="width:100%;margin-top:20px">Upgrade</button></div>
+    </div>
+  </div></section>
+  <section class="subscribe-section" id="subscribe"><div class="container">
+    <h2 style="font-size:24px;font-weight:800;margin-bottom:12px">Get Invoice Tips & Updates</h2>
+    <p style="color:#888;margin-bottom:24px;font-size:14px">Free templates, SARS compliance tips, and new features.</p>
+    <form class="subscribe-form" onsubmit="fetch('https://posh-rabbit-536.convex.site/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:this.email.value,businessId:'saas'})}).then(()=>{this.reset();document.getElementById('sub-msg').style.display='block'})">
+      <input type="email" name="email" placeholder="you@email.com" required>
+      <button type="submit" class="btn-primary">Subscribe Free</button>
+    </form>
+    <p id="sub-msg" class="subscribe-msg">✓ Subscribed!</p>
+  </div></section>
+  <footer><div class="container">© 2026 InvoiceSA. All rights reserved.</div></footer>
+</body></html>
